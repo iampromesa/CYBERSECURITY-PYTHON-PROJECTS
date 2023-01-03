@@ -1,6 +1,6 @@
-10 SIMPLE Python Projects for your Cybersecurity Portfolio:
+Projects
 
-1. Network bandwidth monitor
+1. Network usage monitor
 2. Password strength checker
 3. Firewall rule generator
 4. SSH key generator
