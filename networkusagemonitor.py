@@ -3,7 +3,7 @@ from tkinter import *
 import psutil
 import time 
 
-update_delay = 1 
+update_delay = 1
 
 def get_size(bytes):
     for unit in ["", "K", "M", "G", "T", "P"]:
@@ -14,16 +14,16 @@ def get_size(bytes):
 #creating a window
 window = Tk()
 
-#window size 
+#window size
 window.geometry("400x400+400+400")
 
 #window title
 window.title("Network Usage Scanner")
 
-#window resize 
+#window resize
 window.resizable(height=False, width=False)
 
-#colours for windows 
+#colours for windows
 secondary = "081f4d"
 primary = "#0083ff"
 white = "#ffffff"
@@ -38,7 +38,7 @@ attribution = Label(text="\n...Promesa...", font="Poppins 10 italic")
 
 io = psutil.net_io_counters()
 
-bytes_sent = io.bytes_sent 
+bytes_sent = io.bytes_sent
 bytes_recv = io.bytes_recv
 
 while True:
@@ -47,8 +47,8 @@ while True:
     upload_speed = io_2.bytes_sent - bytes_recv
     download_speed = io_2.bytes_recv - bytes_recv
 
-    label_bytes_sent = f"{get_size(io_2.bytes_sent)}   "
-    label_bytes_recv = f"{get_size(io_2.bytes_recv)}   "
+    label_bytes_sent = f"{get_size(io_2.bytes_sent)}"
+    label_bytes_recv = f"{get_size(io_2.bytes_recv)}"
 
     label_upload_speed = f"{get_size(upload_speed / update_delay)}/s"
     label_download_speed = f"{get_size(download_speed / update_delay)}/s\n"
@@ -58,6 +58,6 @@ while True:
     bytes_recv = io_2.bytes_recv
 
     window.after(update_delay)
-    
+      
     window.after(update_delay)
     window.mainloop()

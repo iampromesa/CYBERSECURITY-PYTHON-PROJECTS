@@ -1,6 +1,6 @@
 Projects
 
-1. Network usage monitor
+1. Network bandwidth scanner 
 2. Password strength checker
 3. Firewall rule generator
 4. SSH key generator
@@ -10,3 +10,4 @@ Projects
 8. Port scanner
 9. Report emailer
 10. SSL cert checker
+11. Port scanner 
